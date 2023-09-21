@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style2.css">
+    <title>Para sashita</title>
+
+</head>
+<body>
+    <div class="content">
+        <h1>Quiere ir al cine conmigo este sabado mi sashita hermosa?</h1>
+        <div class="gif">
+            <img src="roca.gif">
+        </div>
+        
+    </div>
+    <div class="respuestas">
+        <div class="primera">
+            <a href="celebracion.html">Si</a>
+        </div>
+        <div class="segunda" id="move-randomly">
+            <button >No</button>
+        </div>
+    </div>
+   
+</body>
+<script>
+    window.onload = (()=>{
+        let move = document.querySelector("#move-randomly");
+        move.addEventListener("mouseover", function(e) {
+            console.log(move);
+            let min = 50;
+            move.style.position = "fixed";
+            move.style.left = (Math.random() * (window.screen.width - min) + min) + "px";
+            move.style.top = (Math.random() * (window.screen.height - min) + min) + "px";
+            
+        });
+    })
+</script>
+
+
+
+</html>
